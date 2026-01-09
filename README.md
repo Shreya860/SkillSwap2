@@ -138,7 +138,7 @@ This project is licensed under the MIT License.
 
 ## 🙌 Author
 
-**Alex Mercer**
+**Avneesh**
 GitHub: [https://github.com/mercer6969](https://github.com/mercer6969)
 
 ---
