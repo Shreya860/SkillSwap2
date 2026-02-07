@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const http = require('http');
+const path = require('path');
 const { Server } = require('socket.io');
 const cors = require('cors');
 const helmet = require('helmet');
@@ -16,18 +17,21 @@ const io = new Server(server, {
 });
 
 // Middleware
-app.use(helmet());
+app.use(helmet({
+  contentSecurityPolicy: false,
+}));
 app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Mock In-Memory Database
 const users = [];
 
 // Routes
-app.get('/', (req, res) => {
-  res.json({ message: 'Skill Swap Backend API is running' });
-});
+// app.get('/', (req, res) => {
+//   res.json({ message: 'Skill Swap Backend API is running' });
+// });
 
 app.post('/api/signup', (req, res) => {
   const { name, email, password } = req.body;
