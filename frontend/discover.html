@@ -5,25 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover - SkillSwap</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="gradient-theme.css">
 </head>
-<body class="bg-gray-50 min-h-screen font-sans pb-20">
+<body class="gradient-bg animate-gradient-flow min-h-screen font-sans pb-20">
 
     <!-- Navbar -->
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <nav class="bg-glass sticky top-0 z-50 border-b border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex-shrink-0 flex items-center gap-8">
-                    <a href="index.html" class="text-xl font-bold text-blue-600">
-                        SkillSwap
+                    <a href="splash.html" class="text-xl font-bold text-white font-bluesakura">
+                        SKiLlSWaP
                     </a>
                     <div class="hidden sm:flex space-x-4">
-                        <a href="discover.html" class="text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+                        <a href="discover.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium">
                             Discover
                         </a>
-                        <a href="index.html#features" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+                        <a href="index.html#features" class="nav-link px-3 py-2 rounded-md text-sm font-medium">
                             Features
                         </a>
-                        <a href="index.html#about" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+                        <a href="index.html#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium">
                             About
                         </a>
                     </div>
@@ -44,21 +45,21 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
             <div>
-                <h1 class="text-3xl font-bold text-gray-900">Discover Mentors & Peers</h1>
-                <p class="mt-2 text-gray-600">Find the perfect match for your skill exchange journey.</p>
+                <h1 class="text-3xl font-bold gradient-text-white">Discover Mentors & Peers</h1>
+                <p class="mt-2 text-white/70">Find the perfect match for your skill exchange journey.</p>
             </div>
             
             <div class="flex gap-4">
-                <select class="bg-white border border-gray-300 rounded-md py-2 px-4 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <option>All Skills</option>
-                    <option>Tech</option>
-                    <option>Music</option>
-                    <option>Language</option>
+                <select class="bg-glass text-white border-white/30 rounded-md py-2 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-white/50">
+                    <option class="bg-gray-800 text-white">All Skills</option>
+                    <option class="bg-gray-800 text-white">Tech</option>
+                    <option class="bg-gray-800 text-white">Music</option>
+                    <option class="bg-gray-800 text-white">Language</option>
                 </select>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div class="card-gradient rounded-xl shadow-lg overflow-hidden border border-white/20 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
             
             <!-- User 1: Alex Johnson -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 transition-transform">
@@ -201,7 +202,7 @@
                         </div>
                     </div>
 
-                    <a href="profile.html?id=3" class="block w-full mt-6 py-2 bg-gray-900 text-white text-center rounded-lg font-medium hover:bg-gray-800 transition-colors">
+                    <a href="profile.html?id=1" class="block w-full mt-6 py-2 gradient-button text-white text-center rounded-lg font-medium hover:shadow-lg transition-all duration-300">
                         View Profile
                     </a>
                 </div>
@@ -353,7 +354,8 @@
             </div>
 
         </div>
-    </main>
 
+    </main>
+    
 </body>
 </html>

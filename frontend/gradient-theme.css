@@ -1,0 +1,409 @@
+/* ===== CUSTOM FONTS ===== */
+@font-face {
+    font-family: 'BlueSakura';
+    src: url('fonts/BlueSakura.ttf') format('truetype');
+    /* If you have other formats, add them:
+    src: url('fonts/BlueSakura.otf') format('opentype'),
+         url('fonts/BlueSakura.woff') format('woff');
+    */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* This ensures text remains visible during font load */
+}
+
+/* Font utility class */
+.font-bluesakura {
+    font-family: 'BlueSakura', cursive;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    text-transform: none;
+}
+
+
+/* Adjustments for the BlueSakura font */
+.font-bluesakura {
+    font-family: 'BlueSakura', cursive, sans-serif;
+    letter-spacing: 0.15em; /* Increase for more spacing */
+    word-spacing: 0.1em;
+    font-weight: normal;
+    transform: scaleY(1.05); /* Slightly stretch vertically if needed */
+    display: inline-block;
+}
+
+/* For the mixed case version */
+.logo-mixed {
+    font-family: 'BlueSakura', cursive, sans-serif;
+    letter-spacing: 0.12em;
+}
+
+.logo-mixed .lower {
+    text-transform: lowercase;
+}
+
+.logo-mixed .upper {
+    text-transform: uppercase;
+}
+
+/* Alternative with mixed case styling */
+.font-bluesakura-mixed {
+    font-family: 'BlueSakura', cursive, sans-serif;
+    letter-spacing: 0.08em;
+}
+
+/* Special styling for the logo with SKiLlSWaP effect */
+.logo-swap {
+    font-family: 'BlueSakura', cursive, sans-serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: inherit;
+}
+
+/* Make specific letters lowercase for SKiLlSWaP effect */
+.logo-swap .lowercase {
+    text-transform: lowercase;
+}
+
+/* gradient-theme.css - SkillSwap Global Gradient Theme */
+
+/* ===== GRADIENT BACKGROUNDS ===== */
+.gradient-bg {
+    background: linear-gradient(-45deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6);
+    background-size: 400% 400%;
+    animation: gradientFlow 15s ease infinite;
+}
+
+.gradient-bg-static {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+}
+
+.gradient-bg-reverse {
+    background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 50%, #3b82f6 100%);
+}
+
+.gradient-bg-soft {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1));
+    backdrop-filter: blur(10px);
+}
+
+/* ===== GRADIENT TEXT ===== */
+.gradient-text {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-text-blue-pink {
+    background: linear-gradient(135deg, #3b82f6, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-text-purple-pink {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-text-white {
+    background: linear-gradient(135deg, #ffffff, #fce7f3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ===== GRADIENT BORDERS ===== */
+.gradient-border {
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, #3b82f6, #ec4899);
+    border-image-slice: 1;
+    border-radius: inherit;
+}
+
+.gradient-border-bottom {
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(135deg, #3b82f6, #ec4899);
+    border-image-slice: 1;
+}
+
+.gradient-border-left {
+    border-left: 3px solid transparent;
+    border-image: linear-gradient(135deg, #3b82f6, #ec4899);
+    border-image-slice: 1;
+}
+
+/* ===== GRADIENT BUTTONS ===== */
+.gradient-button {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+    background-size: 200% auto;
+    transition: 0.5s;
+    border: none;
+    color: white;
+}
+
+.gradient-button:hover {
+    background-position: right center;
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+    transform: scale(1.02);
+}
+
+.gradient-button-outline {
+    background: transparent;
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, #3b82f6, #ec4899);
+    border-image-slice: 1;
+    color: white;
+    transition: 0.3s;
+}
+
+.gradient-button-outline:hover {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+    color: white;
+    border-image: none;
+    border: 2px solid transparent;
+}
+
+/* ===== GLOW EFFECTS ===== */
+.glow-effect {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+.glow-effect:hover {
+    box-shadow: 0 0 50px rgba(236, 72, 153, 0.4);
+}
+
+.glow-effect-blue {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+}
+
+.glow-effect-pink {
+    box-shadow: 0 0 30px rgba(236, 72, 153, 0.3);
+}
+
+.glow-effect-purple {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+/* ===== GLASS MORPHISM ===== */
+.bg-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bg-glass-dark {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bg-glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ===== NAVIGATION ===== */
+.nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+}
+
+.nav-link:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link-active {
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    font-weight: 500;
+}
+
+/* ===== SKILL TAGS ===== */
+.skill-tag-teach {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+    color: #3b82f6;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    display: inline-block;
+    margin: 0.25rem;
+}
+
+.skill-tag-learn {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(139, 92, 246, 0.1));
+    color: #ec4899;
+    border: 1px solid rgba(236, 72, 153, 0.3);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    display: inline-block;
+    margin: 0.25rem;
+}
+
+/* ===== CARDS ===== */
+.card-gradient {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.card-gradient:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== FORM ELEMENTS ===== */
+.input-gradient {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 0.375rem;
+    padding: 0.5rem 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.input-gradient:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.input-gradient::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes swipeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px) scale(0.8);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateX(20px) scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.9; transform: scale(1.05); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ===== ANIMATION CLASSES ===== */
+.animate-gradient-flow {
+    animation: gradientFlow 15s ease infinite;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.animate-swipe-in {
+    animation: swipeIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+/* ===== DELAY CLASSES ===== */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; }
+.delay-900 { animation-delay: 0.9s; }
+.delay-1000 { animation-delay: 1s; }
+
+/* ===== UTILITY CLASSES ===== */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.backdrop-blur {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* ===== PROFILE SPECIFIC ===== */
+.profile-header-gradient {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+}
+
+.rating-badge {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 640px) {
+    .gradient-text {
+        font-size: 2rem;
+    }
+    
+    .card-gradient {
+        margin: 0.5rem;
+    }
+}

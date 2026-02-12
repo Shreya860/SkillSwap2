@@ -5,41 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkillSwap - Master new skills. Share your expertise.</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @keyframes fadeInIp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in-up {
-            animation: fadeInIp 0.5s ease-out forwards;
-        }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-400 { animation-delay: 0.4s; }
-        
-        /* Initial state for animated elements to prevent flash */
-        .opacity-0-start { opacity: 0; }
-    </style>
+    <link rel="stylesheet" href="gradient-theme.css">
+    
 </head>
-<body class="bg-white min-h-screen font-sans">
+<body class="gradient-bg animate-gradient-flow min-h-screen font-sans">
 
     <!-- Navbar -->
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <nav class="bg-glass sticky top-0 z-50 border-b border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex-shrink-0 flex items-center gap-8">
-                    <a href="index.html" class="text-xl font-bold text-blue-600">
-                        SkillSwap
+                    <a href="splash.html" class="text-xl font-bold text-white font-bluesakura">
+                        SKiLlSWaP
                     </a>
                     <div class="hidden sm:flex space-x-4">
-                        <a href="discover.html" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+                        <a href="discover.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium">
                             Discover
                         </a>
-                        <a href="index.html#features" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
-                            Features
-                        </a>
-                        <a href="index.html#about" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
-                            About
-                        </a>
+                    <a href="index.html#features" class="nav-link px-3 py-2 rounded-md text-sm font-medium">
+                        Features
+                    </a>
+                    <a href="index.html#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium">
+                        About
+                    </a>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4">
@@ -55,97 +43,192 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative overflow-hidden bg-gray-50 pt-16 pb-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="lg:text-center">
-                <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl opacity-0-start animate-fade-in-up">
-                    <span class="block">Master new skills.</span>
-                    <span class="block text-blue-600">Share your expertise.</span>
-                </h1>
-                <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl opacity-0-start animate-fade-in-up delay-200">
-                    SkillSwap is a decentralized platform where you can exchange talents with others. 
-                    Teach what you know, learn what you love, and grow together.
-                </p>
-                <div class="mt-10 sm:flex sm:justify-center gap-4 opacity-0-start animate-fade-in-up delay-400">
-                    <div class="rounded-md shadow">
-                        <a href="signup.html" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
-                            Get Started
-                        </a>
-                    </div>
-                    <div class="mt-3 sm:mt-0 sm:ml-3">
-                        <a href="discover.html" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10">
-                            Browse Skills
-                        </a>
-                    </div>
+    <!-- Hero Section -->
+<section class="relative overflow-hidden pt-16 pb-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="lg:text-center">
+            <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl animate-swipe-in">
+                <span class="block">Master new skills.</span>
+                <span class="block gradient-text-white">Share your expertise.</span>
+            </h1>
+            <p class="mt-3 max-w-md mx-auto text-base text-white/80 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl animate-fade-in-up delay-200">
+                SkillSwap is a decentralized platform where you can exchange talents with others. 
+                Teach what you know, learn what you love, and grow together.
+            </p>
+            <div class="mt-10 sm:flex sm:justify-center gap-4 animate-fade-in-up delay-400">
+                <div class="rounded-md shadow">
+                    <a href="signup.html" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white gradient-button md:py-4 md:text-lg md:px-10">
+                        Get Started
+                    </a>
+                </div>
+                <div class="mt-3 sm:mt-0 sm:ml-3">
+                    <a href="discover.html" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white gradient-button-outline md:py-4 md:text-lg md:px-10">
+                        Browse Skills
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Features</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    Why Choose SkillSwap?
-                </p>
+    <!-- Features Section -->
+<section id="features" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-base gradient-text-blue-pink font-semibold tracking-wide uppercase">Features</h2>
+            <p class="mt-2 text-3xl leading-8 font-extrabold gradient-text-white sm:text-4xl">
+                Why Choose SkillSwap?
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="relative p-6 bg-glass rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:-translate-y-2 animate-fade-in-up delay-200">
+                <div class="absolute -top-4 left-6">
+                    <span class="inline-flex items-center justify-center p-3 gradient-button rounded-md shadow-lg">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </span>
+                </div>
+                <div class="mt-8">
+                    <h3 class="text-lg font-medium text-white tracking-tight">Knowledge Credits</h3>
+                    <p class="mt-2 text-base text-white/70">
+                        Earn credits by teaching others and spend them to learn new skills. A fair and balanced exchange system.
+                    </p>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="relative p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 opacity-0-start animate-fade-in-up delay-200">
-                    <div class="absolute -top-4 left-6">
-                        <span class="inline-flex items-center justify-center p-3 bg-blue-500 rounded-md shadow-lg">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                        </span>
+            <!-- Feature 2 -->
+            <div class="relative p-6 bg-glass rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:-translate-y-2 animate-fade-in-up delay-300">
+                <div class="absolute -top-4 left-6">
+                    <span class="inline-flex items-center justify-center p-3 gradient-button rounded-md shadow-lg">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </span>
+                </div>
+                <div class="mt-8">
+                    <h3 class="text-lg font-medium text-white tracking-tight">Smart Matching</h3>
+                    <p class="mt-2 text-base text-white/70">
+                        Our discovery system helps you find the perfect mentor or student based on skills, availability, and rating.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="relative p-6 bg-glass rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:-translate-y-2 animate-fade-in-up delay-400">
+                <div class="absolute -top-4 left-6">
+                    <span class="inline-flex items-center justify-center p-3 gradient-button rounded-md shadow-lg">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </span>
+                </div>
+                <div class="mt-8">
+                    <h3 class="text-lg font-medium text-white tracking-tight">Trusted Community</h3>
+                    <p class="mt-2 text-base text-white/70">
+                        Verified profiles and user reviews ensure a safe and high-quality learning environment for everyone.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-white/5 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-base gradient-text-blue-pink font-semibold tracking-wide uppercase">About Us</h2>
+            <p class="mt-2 text-3xl leading-8 font-extrabold gradient-text-white sm:text-4xl">
+                Our Mission
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h3 class="text-2xl font-bold text-white">Democratizing Education Through Skill Exchange</h3>
+                <p class="text-white/80 text-lg leading-relaxed">
+                    SkillSwap was born from a simple idea: everyone has something valuable to teach, and everyone has something they want to learn. We're building a community where knowledge is the currency.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-white/80">100% Free to Join</span>
                     </div>
-                    <div class="mt-8">
-                        <h3 class="text-lg font-medium text-gray-900 tracking-tight">Knowledge Credits</h3>
-                        <p class="mt-2 text-base text-gray-500">
-                            Earn credits by teaching others and spend them to learn new skills. A fair and balanced exchange system.
-                        </p>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-white/80">No Money Exchange</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-white/80">Global Community</span>
                     </div>
                 </div>
-
-                <!-- Feature 2 -->
-                <div class="relative p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 opacity-0-start animate-fade-in-up delay-200" style="animation-delay: 0.3s;">
-                    <div class="absolute -top-4 left-6">
-                        <span class="inline-flex items-center justify-center p-3 bg-yellow-500 rounded-md shadow-lg">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                            </svg>
-                        </span>
+                <div class="pt-4">
+                    <a href="signup.html" class="inline-flex items-center gap-2 gradient-button px-6 py-3 rounded-lg text-white font-semibold hover:shadow-lg transition-all duration-300">
+                        Join Our Community
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="bg-glass rounded-2xl p-8 border border-white/20 backdrop-blur-md">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-full gradient-button flex items-center justify-center">
+                        <span class="text-2xl text-white">💡</span>
                     </div>
-                    <div class="mt-8">
-                        <h3 class="text-lg font-medium text-gray-900 tracking-tight">Smart Matching</h3>
-                        <p class="mt-2 text-base text-gray-500">
-                            Our discovery system helps you find the perfect mentor or student based on skills, availability, and rating.
-                        </p>
+                    <div>
+                        <h4 class="text-xl font-bold text-white">Our Impact</h4>
+                        <p class="text-white/70">Since 2024</p>
                     </div>
                 </div>
-
-                <!-- Feature 3 -->
-                <div class="relative p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 opacity-0-start animate-fade-in-up delay-200" style="animation-delay: 0.4s;">
-                    <div class="absolute -top-4 left-6">
-                        <span class="inline-flex items-center justify-center p-3 bg-green-500 rounded-md shadow-lg">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                        </span>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="text-center p-4 bg-white/5 rounded-lg">
+                        <div class="text-3xl font-bold gradient-text-white">1000+</div>
+                        <div class="text-sm text-white/60">Skills Swapped</div>
                     </div>
-                    <div class="mt-8">
-                        <h3 class="text-lg font-medium text-gray-900 tracking-tight">Trusted Community</h3>
-                        <p class="mt-2 text-base text-gray-500">
-                            Verified profiles and user reviews ensure a safe and high-quality learning environment for everyone.
-                        </p>
+                    <div class="text-center p-4 bg-white/5 rounded-lg">
+                        <div class="text-3xl font-bold gradient-text-white">500+</div>
+                        <div class="text-sm text-white/60">Active Users</div>
+                    </div>
+                    <div class="text-center p-4 bg-white/5 rounded-lg">
+                        <div class="text-3xl font-bold gradient-text-white">50+</div>
+                        <div class="text-sm text-white/60">Skills Offered</div>
+                    </div>
+                    <div class="text-center p-4 bg-white/5 rounded-lg">
+                        <div class="text-3xl font-bold gradient-text-white">4.9</div>
+                        <div class="text-sm text-white/60">Avg Rating</div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black/20 backdrop-blur-md border-t border-white/10 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <a href="splash.html" class="text-2xl font-bold gradient-text-white inline-block mb-4">
+                SkillSwap
+            </a>
+            <p class="text-white/60 text-sm">
+                © 2024 SkillSwap. Share what you know, learn what you love.
+            </p>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>

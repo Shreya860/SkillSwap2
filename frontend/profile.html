@@ -5,25 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile - SkillSwap</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="gradient-theme.css">
 </head>
-<body class="bg-gray-50 min-h-screen font-sans pb-20">
+<body class="gradient-bg animate-gradient-flow min-h-screen font-sans pb-20">
 
     <!-- Navbar -->
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <nav class="bg-glass sticky top-0 z-50 border-b border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex-shrink-0 flex items-center gap-8">
-                    <a href="index.html" class="text-xl font-bold text-blue-600">
-                        SkillSwap
+                    <a href="splash.html" class="text-xl font-bold text-white font-bluesakura">
+                        SKiLlSWaP
                     </a>
                     <div class="hidden sm:flex space-x-4">
-                        <a href="discover.html" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+                        <a href="discover.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium">
                             Discover
                         </a>
-                        <a href="index.html#features" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+                       <a href="index.html#features" class="nav-link px-3 py-2 rounded-md text-sm font-medium">
                             Features
                         </a>
-                        <a href="index.html#about" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+                        <a href="index.html#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium">
                             About
                         </a>
                     </div>
@@ -49,7 +50,7 @@
             <h1 class="text-2xl font-bold text-gray-800 mb-4">
                 User not found
             </h1>
-            <a href="discover.html" class="text-blue-600 hover:underline">
+            <a href="discover.html" class="inline-flex items-center text-white/70 hover:text-white mb-8 transition-colors">
                 Back to Discovery
             </a>
         </div>
@@ -74,18 +75,18 @@
                     </div>
                 </div>
 
-                <div class="pt-20 px-8 pb-8">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+                <div class="bg-glass rounded-2xl shadow-xl overflow-hidden border border-white/20 backdrop-blur-md">
+                    <div class="h-48 profile-header-gradient relative">
                         <div>
-                            <h1 id="user-name" class="text-3xl font-bold text-gray-900"></h1>
+                            <h1 id="user-name" class="text-3xl font-bold gradient-text-white"></h1>
                             <p id="user-role" class="text-lg text-gray-600"></p>
                         </div>
 
                         <div class="mt-4 md:mt-0 flex gap-3">
-                            <button class="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700">
+                            <button class="px-6 py-2 gradient-button text-white rounded-lg font-semibold hover:shadow-lg">
                                 Request Swap
                             </button>
-                            <button class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50">
+                            <button class="px-6 py-2 gradient-button-outline text-white rounded-lg">
                                 Message
                             </button>
                         </div>
@@ -120,7 +121,7 @@
 
                         <!-- Sidebar -->
                         <div class="space-y-6">
-                            <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                           <div class="bg-white/5 p-6 rounded-xl border border-white/10 backdrop-blur-sm">
                                 <h3 class="font-semibold text-gray-900 mb-4">Availability</h3>
                                 <div class="flex items-center text-gray-600">
                                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -266,5 +267,6 @@
             }
         });
     </script>
+
 </body>
 </html>

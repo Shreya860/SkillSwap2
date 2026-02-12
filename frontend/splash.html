@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    /* Preload font to reduce FOUT */
+    .wf-loading .font-bluesakura {
+        visibility: hidden;
+    }
+    .wf-active .font-bluesakura {
+        visibility: visible;
+    }
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Share Skills, Learn Together</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="gradient-theme.css">
+    <style>
+        /* Page-specific styles only */
+        .get-started-btn {
+            position: relative;
+            transition: all 0.5s;
+        }
+        
+        .get-started-btn:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="gradient-bg animate-gradient-flow min-h-screen font-sans overflow-hidden">
+    
+    <!-- Floating background elements -->
+    <div class="fixed inset-0 overflow-hidden">
+        <div class="absolute top-20 left-20 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute bottom-20 right-20 w-96 h-96 bg-yellow-400 opacity-10 rounded-full blur-3xl animate-float" style="animation-delay: 1s;"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-purple-400 opacity-10 rounded-full blur-3xl animate-pulse-slow"></div>
+    </div>
+
+    <!-- Main content -->
+    <div class="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
+        
+        <!-- Logo and Title - Swipe in from left -->
+<div class="text-center mb-8">
+    <div class="flex justify-center items-center">
+        <h1 class="text-7xl md:text-8xl font-bluesakura text-white animate-swipe-in drop-shadow-lg">
+            SKiLlSWaP
+        </h1>
+
+    </div>
+    <div class="flex justify-center items-center gap-2 overflow-hidden mt-2">
+        <div class="h-1 w-16 bg-white/50 rounded-full animate-swipe-in delay-200"></div>
+        <p class="text-xl md:text-2xl gradient-text-white font-light animate-fade-in-up delay-300">
+            Share Skills · Learn Together
+        </p>
+        <div class="h-1 w-16 bg-white/50 rounded-full animate-swipe-in delay-200"></div>
+    </div>
+</div>
+
+        <!-- Centered Hero Message -->
+        <div class="max-w-3xl mx-auto text-center mb-12">
+            <p class="text-white/95 text-2xl md:text-3xl font-medium mb-4 animate-fade-in-up delay-400 leading-relaxed">
+                Everyone has something to teach.<br>
+                Everyone has something to learn.
+            </p>
+            <p class="text-white/80 text-lg md:text-xl animate-fade-in-up delay-500">
+                Join the community where knowledge is shared, not sold.
+            </p>
+        </div>
+
+        <!-- Single Get Started Button - Big and Bold -->
+        <div class="animate-fade-in-up delay-600">
+            <a href="login.html" 
+               class="group relative px-12 py-6 bg-white rounded-full font-bold text-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-110 overflow-hidden inline-flex items-center gap-3 glow-effect get-started-btn">
+                <span class="gradient-text-blue-pink text-2xl">Get Started</span>
+                <svg class="relative z-10 w-8 h-8 group-hover:translate-x-2 transition-transform duration-300 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+                <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+            </a>
+            <p class="text-white/70 text-sm mt-4 animate-fade-in-up delay-700">
+                Join now · It's free
+            </p>
+        </div>
+
+        
+    </div>
+
+    <script>
+    // Check if font is loaded
+    if (document.fonts && document.fonts.load) {
+        document.fonts.load('1em "BlueSakura"').then(function() {
+            document.body.classList.add('font-loaded');
+        });
+    } else {
+        // Fallback for browsers that don't support Font Loading API
+        document.body.classList.add('font-loaded');
+    }
+</script>
+
+</body>
+</html>
